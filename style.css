@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.navbar {
+  background-color: #222;
+  color: #fff;
+  border-radius: 60px;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+  border-radius: 10px;
+  
+}
+
+.navbar-logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #555;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.navbar-links li a:hover {
+  background-color: #333;
+}
+
+.call-btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  background: #2387B9;
+    color: white;
+    border: 2px solid #2387B9;
+}
+
+.call-btn:hover {
+  background: #1a6a94;
+    transform: translateY(-2px);
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-icon, .close-icon {
+  transition: opacity 0.3s ease;
+}
+
+.close-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+  @media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+    z-index: 1001;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #222;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .call-btn {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+ /* Hero  */
+
+        .hero {
+    padding: 1rem 2rem;
+    height: 100vh;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-image {
+    flex: 1;
+  }
+
+  .hero-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #2c2c2c;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 span {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #333;
+    display: block;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: #2387B9;
+    color: white;
+    border: 2px solid #2387B9;
+  }
+
+  .btn-primary:hover {
+    background: #1a6a94;
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #2387B9;
+    border: 2px solid #2387B9;
+  }
+
+  .btn-outline:hover {
+    background: rgba(35, 135, 185, 0.1);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+    }
+    
+    .hero-text, .hero-image {
+      flex: none;
+      width: 100%;
+    }
+    
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    
+    .hero h1 span {
+      font-size: 1.4rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+    }
+    
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+
+       
