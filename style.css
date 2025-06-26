@@ -137,6 +137,18 @@
   .call-btn {
     display: none;
   }
+
+  .navbar-logo span{
+    font-size: 1rem;
+  }
+
+  .navbar-logo img {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+  border-radius: 10px;
+  
+}
 }
 
 
