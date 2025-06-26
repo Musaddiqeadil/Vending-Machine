@@ -1,20 +1,28 @@
-body {
+*{
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.main-hero{
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  height: auto;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+
+}
 .navbar {
   background-color: #222;
   color: #fff;
   border-radius: 60px;
-  padding: 1rem 2rem;
-  margin: 2rem;
+  padding: 1rem 2rem; 
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
+  
 }
 
 .navbar-logo {
@@ -95,7 +103,7 @@ body {
 }
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 868px) {
   .navbar-toggle {
     display: block;
     z-index: 1001;
@@ -133,128 +141,318 @@ body {
 
 
 
+.hero {
+  padding: 6rem 1rem;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
 
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
 
+.hero-text {
+  flex: 1 1 500px;
+  text-align: left;
+}
 
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
 
- /* Hero  */
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-        .hero {
-    padding: 1rem 2rem;
-    height: 100vh;
-  }
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2c2c2c;
+  margin-bottom: 1.2rem;
+}
 
-  .hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-  }
+.hero h1 span {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #333;
+  display: block;
+}
 
-  .hero-text {
-    flex: 1;
-  }
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
 
-  .hero-image {
-    flex: 1;
-  }
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
-  .hero-image img {
-    width: 90%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  
+}
 
+.btn-primary {
+  background: #2387B9;
+  color: white;
+  border: 2px solid #2387B9;
+}
+
+.btn-primary:hover {
+  background: #1a6a94;
+  border-color: #1a6a94;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2387B9;
+  border: 2px solid #2387B9;
+}
+
+.btn-outline:hover {
+  background: rgba(35, 135, 185, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
   .hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #2c2c2c;
-    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .hero h1 span {
-    font-weight: 400;
-    font-size: 1.8rem;
-    color: #333;
-    display: block;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .hero p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    max-width: 500px;
+  .hero-text,
+  .hero-image {
+    flex: none;
+    width: 100%;
   }
 
   .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    flex-direction: column;
+    
   }
 
   .btn {
-    padding: 0.8rem 1.8rem;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
   }
 
-  .btn-primary {
-    background: #2387B9;
-    color: white;
-    border: 2px solid #2387B9;
+  .hero h1 span {
+    font-size: 1.2rem;
   }
 
-  .btn-primary:hover {
-    background: #1a6a94;
-    transform: translateY(-2px);
+  .hero p {
+    font-size: 1rem;
   }
-
-  .btn-outline {
-    background: transparent;
-    color: #2387B9;
-    border: 2px solid #2387B9;
-  }
-
-  .btn-outline:hover {
-    background: rgba(35, 135, 185, 0.1);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 768px) {
-    .hero-container {
-      flex-direction: column;
-    }
-    
-    .hero-text, .hero-image {
-      flex: none;
-      width: 100%;
-    }
-    
-    .hero h1 {
-      font-size: 2.2rem;
-    }
-    
-    .hero h1 span {
-      font-size: 1.4rem;
-    }
-    
-    .hero-buttons {
-      flex-direction: column;
-    }
-    
-    .btn {
-      width: 100%;
-      text-align: center;
-    }
-  }
+}
 
 
+/* variety */
 
-       
+
+.team-section {
+            padding: 80px 20px;
+            background: transparent;
+            text-align: center;
+           border-radius: 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .team-slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+            min-height: 400px; /* Ensure space for content */
+        }
+
+        .team-member {
+            min-width: 100%;
+            padding: 0 15px;
+            transition: all 0.5s ease;
+            text-align: center;
+            flex-shrink: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .team-member.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        .member-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 10%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .member-position {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .member-description {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 38%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .slider-btn:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-btn {
+            left: 20px;
+        }
+
+        .next-btn {
+            right: 20px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #fffbfb;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: #333;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+
+          .section-title{
+           
+            font-size: 2rem;
+          }
+
+          .member-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 10%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+            .slider-btn {
+                display: none;
+            }
+
+            .team-member {
+                padding: 0 30px;
+            }
+        }
