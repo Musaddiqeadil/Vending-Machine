@@ -1,75 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/css/ionicons.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="navbar">
-        <div class="navbar-in">
-            <div class="navbar-left">
-                <a href="/about">
-                    <img src="./images/logo.png" alt="lanspace logo">
-                </a>
-            </div>
-            <div class="navbar-right" id="navbarRight">
-                <div class="navbar-rl">
-                    <ul class="nav-links">
-                        <li class="nav-link">
-                            <a href="/">Home</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="/">About</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="/">Categories</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="/">Trending</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="navbar-rr">
-                
-                    <div class="nav-btn-2">
-                        <a href="/">Contact Us</a>
-                    </div>
-                </div>
-                <div class="right-bg" id="rightBg"></div>
-            </div>
-            <div class="toggle-icon" id="toggleIcon">
-                <ion-icon name="menu"></ion-icon>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vending machine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-hero">
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img
+            src="./images/logo.png"
+            alt="Fraxotic Logo"
+          />
         </div>
+
+        <div class="navbar-toggle" id="menu-toggle">☰</div>
+
+        <ul class="navbar-links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+
+        <a href="tel:1234567890" class="call-btn">📞 Contact</a>
+      </nav>
+
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>
+              <span>Your Trusted</span>
+              Vending Machine<br />
+              Supplier in<br />
+              Hyderabad
+            </h1>
+            <p>
+              Looking for reliable vending machine dealers in Hyderabad?
+              Fraxotic offers top vending machines for snacks, beverages, and
+              food, ensuring convenience, efficiency, and customer satisfaction.
+              Choose us for the best vending solutions in Telangana.
+            </p>
+            <div class="hero-buttons">
+              <a href="#quote" class="btn btn-primary">Get a quote</a>
+              <a href="#brochure" class="btn btn-outline">Download Brochure</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/images/vending-01.png" alt="Vending Machines" />
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <h2 class="section-title">OUR VENDING MACHINE MODELS</h2>
+        <div class="team-container">
+          <div class="team-slider" id="teamSlider">
+            <!-- Slide 1 -->
+            <div class="team-member active">
+              <img
+                src="/images/vending-01.png"
+                alt="Snack Vending Machine"
+                class="member-image"
+              />
+              <h3 class="member-name">Snack Pro 3000</h3>
+              <p class="member-position">SNACK VENDING MACHINE</p>
+              <p class="member-description">
+                Our premium snack vending machine with 40 product capacity,
+                touchless payment options, and real-time inventory tracking.
+              </p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="team-member">
+              <img
+                src="/images/vending-01.png"
+                alt="Beverage Vending Machine"
+                class="member-image"
+              />
+              <h3 class="member-name">Beverage Master</h3>
+              <p class="member-position">DRINK VENDING MACHINE</p>
+              <p class="member-description">
+                State-of-the-art beverage machine with temperature control, can
+                and bottle options, and energy-saving mode.
+              </p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="team-member">
+              <img
+                src="/images/vending-01.png"
+                alt="Combo Vending Machine"
+                class="member-image"
+              />
+              <h3 class="member-name">Combo King</h3>
+              <p class="member-position">COMBO VENDING MACHINE</p>
+              <p class="member-description">
+                Hybrid machine offering both snacks and drinks in one compact
+                unit, perfect for high-traffic locations.
+              </p>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="team-member">
+              <img
+                src="/images/vending-01.png"
+                alt="Healthy Options Machine"
+                class="member-image"
+              />
+              <h3 class="member-name">Healthy Choice</h3>
+              <p class="member-position">HEALTHY VENDING MACHINE</p>
+              <p class="member-description">
+                Specialized in fresh, healthy options with refrigeration for
+                perishable items and nutritional information display.
+              </p>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="team-member">
+              <img
+                src="/images/vending-01.png"
+                alt="Specialty Machine"
+                class="member-image"
+              />
+              <h3 class="member-name">Specialty Pro</h3>
+              <p class="member-position">SPECIALTY ITEMS MACHINE</p>
+              <p class="member-description">
+                Customizable machine for unique products like electronics,
+                personal care items, or office supplies.
+              </p>
+            </div>
+          </div>
+
+          <button class="slider-btn prev-btn" id="prevBtn">&#10094;</button>
+          <button class="slider-btn next-btn" id="nextBtn">&#10095;</button>
+
+          <div class="slider-dots" id="sliderDots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <script>
-        const toggleIcon = document.getElementById('toggleIcon');
-        const navbarRight = document.getElementById('navbarRight');
-        const rightBg = document.getElementById('rightBg');
-        let isActive = false;
-
-        toggleIcon.addEventListener('click', function() {
-            isActive = !isActive;
-            if (isActive) {
-                navbarRight.classList.add('active');
-                toggleIcon.innerHTML = '<ion-icon name="close"></ion-icon>';
-            } else {
-                navbarRight.classList.remove('active');
-                toggleIcon.innerHTML = '<ion-icon name="menu"></ion-icon>';
-            }
-        });
-
-        rightBg.addEventListener('click', function() {
-            isActive = false;
-            navbarRight.classList.remove('active');
-            toggleIcon.innerHTML = '<ion-icon name="menu"></ion-icon>';
-        });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
